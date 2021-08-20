@@ -12,7 +12,7 @@ public class PlayerMovementScript : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    bool isGrounded;
+    public bool isGrounded;
     public float jumpHieght = 3f;
     public GameObject menuManagerObj;
 
