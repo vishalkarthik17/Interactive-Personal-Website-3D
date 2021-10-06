@@ -47,6 +47,10 @@ public class SelectionManager : MonoBehaviour
                 selectionRenderer.material = Github_default;
             if (current_selection.gameObject.name == "Coursework_Btn_Btech" || current_selection.gameObject.name == "Coursework_Btn_12th")
                 selectionRenderer.material = cw_default;
+            if (current_selection.gameObject.name == "IPW_Btn" || current_selection.gameObject.name == "LC_SC_Btn"
+                || current_selection.gameObject.name == "LC_PS_Btn" || current_selection.gameObject.name == "PMS_Btn"
+                )
+                selectionRenderer.material = cw_default;
 
             current_selection = null;
 
@@ -71,6 +75,12 @@ public class SelectionManager : MonoBehaviour
                 {
                     selectionRenderer.material = cw_selected;
                 }
+                if (selectionRenderer != null && (selection.gameObject.name == "IPW_Btn" || selection.gameObject.name == "LC_SC_Btn"
+                        || selection.gameObject.name == "LC_PS_Btn" || selection.gameObject.name == "PMS_Btn"
+                    ))
+                {
+                    selectionRenderer.material = cw_selected;
+                }
 
                 current_selection = selection;
             }
@@ -84,7 +94,17 @@ public class SelectionManager : MonoBehaviour
                     OpenURL("https://www.linkedin.com/in/vishal-karthikeyan-ab4a60184/");
                 if (hitObj.collider.name == "Github_icon")
                     OpenURL("https://github.com/vishalkarthik17");
-                if(hitObj.collider.name== "Coursework_Btn_Btech")
+
+                if (hitObj.collider.name == "IPW_Btn")
+                    OpenURL("https://github.com/vishalkarthik17/Interactive-Personal-Website-3D");
+                if (hitObj.collider.name == "LC_SC_Btn")
+                    OpenURL("https://github.com/vishalkarthik17/LoseControl2D-UnityGame");
+                if (hitObj.collider.name == "LC_PS_Btn")
+                    OpenURL("https://play.google.com/store/apps/details?id=com.VishalKarthik.LoseControl2d");
+                if (hitObj.collider.name == "PMS_Btn")
+                    OpenURL("https://github.com/vishalkarthik17/ProjectManagementSystem_Faculty_App");
+
+                if (hitObj.collider.name== "Coursework_Btn_Btech")
                 {
                     BtechPanel.SetActive(true);
                     MainCameraPlayer.GetComponent<LookMouse>().unlockCursor();
