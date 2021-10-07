@@ -41,6 +41,8 @@ public class LookMouse : MonoBehaviour
         {
             if (isLocked)
                 unlockCursor();
+            else
+                lockCursor();
         }
         
         bool canStartLook = menuManagerObj.GetComponent<MenuManagerScript>().canMouseInput;

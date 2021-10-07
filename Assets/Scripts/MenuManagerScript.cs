@@ -22,7 +22,8 @@ public class MenuManagerScript : MonoBehaviour
         {
             canMouseInput = true;
             Startpanel.gameObject.SetActive(false);
-
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
