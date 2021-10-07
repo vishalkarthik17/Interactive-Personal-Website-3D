@@ -93,7 +93,13 @@ public class SelectionManager : MonoBehaviour
             
         }
 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0)) 
+        {
+            if (Cursor.visible == true) 
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
             if (hitObj.transform != null)
             {
                 if (hitObj.collider.name == "Linkedin_icon")

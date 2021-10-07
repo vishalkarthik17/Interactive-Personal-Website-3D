@@ -1866,7 +1866,7 @@ GameObject:
   - component: {fileID: 275928673}
   - component: {fileID: 275928672}
   m_Layer: 0
-  m_Name: TechnicalSkillsTitle (1)
+  m_Name: LastUpdatedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Last Updated On : Oct 7, 2021'
+  m_text: 'Last Updated On : Oct 8, 2021'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
