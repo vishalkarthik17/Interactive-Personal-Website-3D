@@ -51,7 +51,8 @@ public class SelectionManager : MonoBehaviour
                 || current_selection.gameObject.name == "LC_PS_Btn" || current_selection.gameObject.name == "PMS_Btn"
                 )
                 selectionRenderer.material = cw_default;
-
+            if (current_selection.gameObject.name == "ICPU_Btn" || current_selection.gameObject.name=="NNDL_Btn")
+                selectionRenderer.material = cw_default;
             current_selection = null;
 
         }
@@ -81,6 +82,11 @@ public class SelectionManager : MonoBehaviour
                 {
                     selectionRenderer.material = cw_selected;
                 }
+                if (selectionRenderer != null && (selection.gameObject.name == "ICPU_Btn" || selection.gameObject.name == "NNDL_Btn"))
+                {
+                    selectionRenderer.material = cw_selected;
+                }
+
 
                 current_selection = selection;
             }
@@ -103,6 +109,11 @@ public class SelectionManager : MonoBehaviour
                     OpenURL("https://play.google.com/store/apps/details?id=com.VishalKarthik.LoseControl2d");
                 if (hitObj.collider.name == "PMS_Btn")
                     OpenURL("https://github.com/vishalkarthik17/ProjectManagementSystem_Faculty_App");
+
+                if (hitObj.collider.name == "ICPU_Btn")
+                    OpenURL("https://www.coursera.org/account/accomplishments/certificate/NKVRLFNX5GTC");
+                if (hitObj.collider.name == "NNDL_Btn")
+                    OpenURL("https://www.coursera.org/account/accomplishments/certificate/X9RBAEKTPRTY");
 
                 if (hitObj.collider.name== "Coursework_Btn_Btech")
                 {
