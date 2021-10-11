@@ -51,7 +51,7 @@ public class SelectionManager : MonoBehaviour
                 || current_selection.gameObject.name == "LC_PS_Btn" || current_selection.gameObject.name == "PMS_Btn"
                 )
                 selectionRenderer.material = cw_default;
-            if (current_selection.gameObject.name == "ICPU_Btn" || current_selection.gameObject.name=="NNDL_Btn")
+            if (current_selection.gameObject.name == "ICPU_Btn" || current_selection.gameObject.name=="NNDL_Btn" || current_selection.gameObject.name == "IDNL_Btn")
                 selectionRenderer.material = cw_default;
             current_selection = null;
 
@@ -82,7 +82,7 @@ public class SelectionManager : MonoBehaviour
                 {
                     selectionRenderer.material = cw_selected;
                 }
-                if (selectionRenderer != null && (selection.gameObject.name == "ICPU_Btn" || selection.gameObject.name == "NNDL_Btn"))
+                if (selectionRenderer != null && (selection.gameObject.name == "ICPU_Btn" || selection.gameObject.name == "NNDL_Btn" || selection.gameObject.name == "IDNL_Btn"))
                 {
                     selectionRenderer.material = cw_selected;
                 }
@@ -120,6 +120,8 @@ public class SelectionManager : MonoBehaviour
                     OpenURL("https://www.coursera.org/account/accomplishments/certificate/NKVRLFNX5GTC");
                 if (hitObj.collider.name == "NNDL_Btn")
                     OpenURL("https://www.coursera.org/account/accomplishments/certificate/X9RBAEKTPRTY");
+                if (hitObj.collider.name == "IDNL_Btn")
+                    OpenURL("https://www.coursera.org/account/accomplishments/certificate/XH89WTGZCXBX");
 
                 if (hitObj.collider.name== "Coursework_Btn_Btech")
                 {
